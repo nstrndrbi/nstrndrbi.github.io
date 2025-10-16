@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nastaran Darabi - PhD Graduate Portfolio">
+    <title>Nastaran Darabi | PhD Graduate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">ND</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">Hello, I'm</span>
+                    <span class="name">Nastaran Darabi</span>
+                </h1>
+                <p class="hero-subtitle">PhD Candidate | Machine Learning Researcher | AI Engineer</p>
+                <p class="hero-description">
+                    Specializing in adversarial machine learning, vision-language models, and robust AI systems.
+                    Passionate about building trustworthy and resilient autonomous systems at the edge.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="Nastaran Darabi_CV_Oct_2025.pdf" download class="btn btn-secondary">Download CV</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="Nastaran_photo.jpg" alt="Nastaran Darabi">
+                    <div class="image-border"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="section-divider"></div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">
+                        I am a PhD candidate in Electrical and Computer Engineering at the University of Illinois Chicago, 
+                        with concurrent Master's degrees in Computer Science and ECE.
+                    </p>
+                    <p>
+                        My research focuses on ensuring robustness and reliability in multimodal autonomous systems through 
+                        a unified framework for multi-level anomaly detection, adaptive resilience, and causal diagnostics. 
+                        I have industry experience as a Machine Learning Intern at Apple and as an AI Engineer Intern at Radical AI, 
+                        where I developed cutting-edge AI solutions.
+                    </p>
+                    <p>
+                        I am passionate about adversarial machine learning, vision-language models, and building trustworthy AI systems. 
+                        My work has been submitted to top-tier conferences including AAAI, ICRA, ICASSP, and DATE, and I am supported 
+                        by the Semiconductor Research Corporation (SRC) as a Research Scholar.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">Research Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">Courses Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="4">0</div>
+                        <div class="stat-label">GPA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="research section section-alt">
+        <div class="container">
+            <h2 class="section-title">Research Areas</h2>
+            <div class="section-divider"></div>
+            <p class="section-description">
+                My research spans multiple cutting-edge areas in AI and machine learning, 
+                with a focus on building robust and trustworthy autonomous systems.
+            </p>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Vision-Language Models & Multimodal Learning</h3>
+                    <p>
+                        Developing robust vision-language models and multimodal deep learning systems 
+                        that can effectively process and integrate information from multiple sensory modalities.
+                    </p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                    </div>
+                    <h3>Adversarial Machine Learning & Robust AI</h3>
+                    <p>
+                        Researching adversarial attacks and defenses to enhance the robustness and 
+                        trustworthiness of machine learning models against malicious inputs and edge-case scenarios.
+                    </p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                        </svg>
+                    </div>
+                    <h3>Ambient LLM Agents & Reinforcement Learning</h3>
+                    <p>
+                        Designing intelligent agents using large language models and reinforcement learning 
+                        for autonomous decision-making in complex, dynamic environments.
+                    </p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Causal Inference & Anomaly Detection</h3>
+                    <p>
+                        Applying causal inference methods and developing advanced anomaly detection 
+                        techniques for sensor trustworthiness and system reliability in edge autonomy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications section">
+        <div class="container">
+            <h2 class="section-title">Selected Publications</h2>
+            <div class="section-divider"></div>
+            <div class="publications-list">
+                <article class="publication-item">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            EigenShield: Causal Subspace Filtering via Random Matrix Theory for Adversarially Robust Vision-Language Models
+                        </h3>
+                        <p class="pub-authors">
+                            <strong>Nastaran Darabi</strong>, Devashri Naik, Sina Tayebati, Dinithi Jayasuriya, Ranganath Krishnan, Amit Ranjan Trivedi
+                        </p>
+                        <p class="pub-journal">
+                            <em>AAAI Conference on Artificial Intelligence</em>, Under Review
+                        </p>
+                        <div class="pub-tags">
+                            <span class="tag">Conference Paper</span>
+                            <span class="tag">Under Review</span>
+                            <span class="tag">Vision-Language Models</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="publication-item">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Resilience in Ambient Multi-Agent LLMs via Decentralized Bio-Autonomic Control and Immune-Inspired Anomaly Detection
+                        </h3>
+                        <p class="pub-authors">
+                            <strong>Nastaran Darabi</strong>, Devashri Naik, Sina Tayebati, Dinithi Jayasuriya, Amit Ranjan Trivedi
+                        </p>
+                        <p class="pub-journal">
+                            <em>AAAI Conference on Artificial Intelligence</em>, Under Review
+                        </p>
+                        <div class="pub-tags">
+                            <span class="tag">Conference Paper</span>
+                            <span class="tag">LLM Agents</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="publication-item">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Enhancing 3D Robotic Vision Robustness by Minimizing Adversarial Mutual Information through a Curriculum Training Approach
+                        </h3>
+                        <p class="pub-authors">
+                            <strong>Nastaran Darabi</strong>, Dinithi Jayasuriya, Devashri Naik, Theja Tulabandhula, Amit Ranjan Trivedi
+                        </p>
+                        <p class="pub-journal">
+                            <em>IEEE International Conference on Robotics and Automation (ICRA)</em>
+                        </p>
+                        <div class="pub-tags">
+                            <span class="tag">Conference Paper</span>
+                            <span class="tag">Robotics</span>
+                            <span class="tag">3D Vision</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="publication-item">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            STARNet: Sensor Trustworthiness and Anomaly Recognition via Approximated Likelihood Regret for Robust Edge Autonomy
+                        </h3>
+                        <p class="pub-authors">
+                            <strong>Nastaran Darabi</strong>, Sina Tayebati, Sureshkumar S., Sathya Ravi, Theja Tulabandhula, Amit R. Trivedi
+                        </p>
+                        <p class="pub-journal">
+                            <em>IEEE International Joint Conference on Neural Networks (IJCNN)</em>
+                        </p>
+                        <div class="pub-tags">
+                            <span class="tag">Conference Paper</span>
+                            <span class="tag">Anomaly Detection</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="publication-item">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Navigating the Unknown: Uncertainty-Aware Compute-in-Memory Autonomy of Edge Robotics
+                        </h3>
+                        <p class="pub-authors">
+                            <strong>Nastaran Darabi</strong>, Priyesh Shukla, Dinithi Jayasuriya, Divake Kumar, Alex C Stutts, Amit Ranjan Trivedi
+                        </p>
+                        <p class="pub-journal">
+                            <em>Design, Automation and Test in Europe Conference (DATE)</em>
+                        </p>
+                        <div class="pub-tags">
+                            <span class="tag">Conference Paper</span>
+                            <span class="tag">Edge Computing</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="publication-item">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Intelligent Sensing-to-Action for Robust Autonomy at the Edge: Opportunities and Challenges
+                        </h3>
+                        <p class="pub-authors">
+                            A.R. Trivedi, S. Tayebati, H. Kumawat, <strong>N. Darabi</strong>, D. Kumar, et al.
+                        </p>
+                        <p class="pub-journal">
+                            <em>Design, Automation and Test in Europe Conference (DATE)</em>
+                        </p>
+                        <div class="pub-tags">
+                            <span class="tag">Conference Paper</span>
+                            <span class="tag">Invited</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline">View All Publications</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section section-alt">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+            <div class="section-divider"></div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">May 2025 - September 2025</span>
+                        <h3>Machine Learning Intern</h3>
+                        <p class="timeline-location">Apple, Cupertino, CA</p>
+                        <p class="timeline-description">
+                            Designing AI/ML models for manufacturing equipment. Conducting model training 
+                            and performance validation. Integrating models and algorithms into manufacturing 
+                            equipment for enhanced efficiency and quality control.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">April 2024 - December 2024</span>
+                        <h3>Artificial Intelligence Engineer Intern</h3>
+                        <p class="timeline-location">Radical AI, Remote</p>
+                        <p class="timeline-description">
+                            Developed ReX, an AI Coach using OpenAI and Google Gemini technologies. 
+                            ReX provides personalized coaching, mentorship, and career support across 
+                            different stages of learners' career life-cycles.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">January 2023 - Present</span>
+                        <h3>Research Scholar</h3>
+                        <p class="timeline-location">Semiconductor Research Corporation (SRC), Remote</p>
+                        <p class="timeline-description">
+                            Conducting research on efficient multi-modality sensor fusion for 3D object 
+                            detection. Developing adaptive LiDAR techniques for robust autonomous systems 
+                            in challenging edge environments.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">January 2021 - Present</span>
+                        <h3>Graduate Research Assistant</h3>
+                        <p class="timeline-location">University of Illinois Chicago, Chicago, IL</p>
+                        <p class="timeline-description">
+                            Developed EigenShield, an inference-time defense leveraging Random Matrix Theory 
+                            for adversarial robustness in vision-language models. Reduced attack success rate 
+                            by 76.5% for LLaVA-v1.5-7B and 45.3% for MiniGPT-4.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">January 2021 - March 2026 (Expected)</span>
+                        <h3>PhD in Electrical and Computer Engineering</h3>
+                        <p class="timeline-location">University of Illinois Chicago, Chicago, IL</p>
+                        <p class="timeline-description">
+                            Thesis: "Ensuring Robustness and Reliability in Multimodal Autonomous Systems: 
+                            A Unified Framework for Multi-Level Anomaly Detection, Adaptive Resilience, 
+                            and Causal Diagnostics." GPA: 4.0/4.0
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">January 2024 - May 2025</span>
+                        <h3>MS in Computer Science (Concurrent)</h3>
+                        <p class="timeline-location">University of Illinois Chicago, Chicago, IL</p>
+                        <p class="timeline-description">
+                            Focus: Natural Language Processing and Machine Learning. GPA: 4.0/4.0
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">January 2021 - May 2025</span>
+                        <h3>MS in Electrical and Computer Engineering</h3>
+                        <p class="timeline-location">University of Illinois Chicago, Chicago, IL</p>
+                        <p class="timeline-description">
+                            Focus: Deep Learning. GPA: 4.0/4.0
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="section-divider"></div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>MATLAB</li>
+                        <li>C/C++</li>
+                        <li>SQL & NoSQL</li>
+                        <li>R</li>
+                        <li>Perl</li>
+                        <li>HTML & JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>ML Libraries & Frameworks</h3>
+                    <ul class="skill-list">
+                        <li>PyTorch</li>
+                        <li>TensorFlow</li>
+                        <li>Scikit-Learn</li>
+                        <li>Pandas</li>
+                        <li>Pyro</li>
+                        <li>Hugging Face Transformers</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>LLM Tools & Technologies</h3>
+                    <ul class="skill-list">
+                        <li>LangGraph</li>
+                        <li>LlamaIndex</li>
+                        <li>AI Agents (CrewAI)</li>
+                        <li>fedLLM</li>
+                        <li>OpenAI & Google Gemini</li>
+                        <li>Git, Docker, Figma</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Research Areas</h3>
+                    <ul class="skill-list">
+                        <li>Machine Learning</li>
+                        <li>Computer Vision</li>
+                        <li>Natural Language Processing</li>
+                        <li>Reinforcement Learning</li>
+                        <li>Causal Inference</li>
+                        <li>Neural Networks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section section-alt">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-divider"></div>
+            <p class="section-description">
+                I'm always interested in new opportunities, collaborations, and discussions. 
+                Feel free to reach out!
+            </p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Email</h3>
+                        <a href="mailto:ndarab2@uic.edu">ndarab2@uic.edu</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/nastaran-darabi/" target="_blank">linkedin.com/in/nastaran-darabi</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </div>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/nstrndrbi" target="_blank">github.com/nstrndrbi</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 16v-4M12 8h.01"></path>
+                            </svg>
+                        </div>
+                        <h3>Google Scholar</h3>
+                        <a href="https://scholar.google.com/citations?hl=en&user=ZKdsKvQAAAAJ&view_op=list_works" target="_blank">View Profile</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Nastaran Darabi. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/nastaran-darabi/" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/nstrndrbi" target="_blank" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="mailto:ndarab2@uic.edu" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                    <a href="https://scholar.google.com/citations?hl=en&user=ZKdsKvQAAAAJ&view_op=list_works" target="_blank" aria-label="Google Scholar">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"></path>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
