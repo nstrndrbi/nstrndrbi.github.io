@@ -6,98 +6,112 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Animate sections on scroll
 document.addEventListener('DOMContentLoaded', () => {
-    // Hero animations
+    // Hero animations with smoother transitions
     gsap.from('.hero-text', {
         opacity: 0,
-        y: 40,
-        duration: 1,
-        ease: 'power3.out'
+        y: 30,
+        duration: 0.8,
+        ease: 'power2.out',
+        clearProps: 'all' // Clear props after animation to prevent conflicts
     });
 
     gsap.from('.hero-image', {
         opacity: 0,
-        x: 50,
-        duration: 1,
-        delay: 0.3,
-        ease: 'power3.out'
+        x: 30,
+        duration: 0.8,
+        delay: 0.2,
+        ease: 'power2.out',
+        clearProps: 'all'
     });
 
-    // Animate stats on scroll
+    // Animate stats on scroll with smoother transitions
     gsap.from('.stat-card', {
         scrollTrigger: {
             trigger: '.about-stats',
-            start: 'top 80%'
+            start: 'top 85%',
+            once: true // Animate only once for better performance
         },
         opacity: 0,
-        y: 50,
-        stagger: 0.2,
-        duration: 0.8,
-        ease: 'power3.out'
+        y: 30,
+        stagger: 0.15,
+        duration: 0.6,
+        ease: 'power2.out',
+        clearProps: 'all'
     });
 
     // Animate research cards
     gsap.from('.research-card', {
         scrollTrigger: {
             trigger: '.research-grid',
-            start: 'top 80%'
+            start: 'top 85%',
+            once: true
         },
         opacity: 0,
-        y: 50,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: 'power3.out'
+        y: 30,
+        stagger: 0.12,
+        duration: 0.6,
+        ease: 'power2.out',
+        clearProps: 'all'
     });
 
     // Animate publications
     gsap.from('.publication-item', {
         scrollTrigger: {
             trigger: '.publications-list',
-            start: 'top 80%'
+            start: 'top 85%',
+            once: true
         },
         opacity: 0,
-        x: -50,
-        stagger: 0.2,
-        duration: 0.8,
-        ease: 'power3.out'
+        y: 30,
+        stagger: 0.15,
+        duration: 0.6,
+        ease: 'power2.out',
+        clearProps: 'all'
     });
 
     // Animate timeline items
     gsap.from('.timeline-item', {
         scrollTrigger: {
             trigger: '.timeline',
-            start: 'top 80%'
+            start: 'top 85%',
+            once: true
         },
         opacity: 0,
-        y: 50,
-        stagger: 0.2,
-        duration: 0.8,
-        ease: 'power3.out'
+        y: 30,
+        stagger: 0.15,
+        duration: 0.6,
+        ease: 'power2.out',
+        clearProps: 'all'
     });
 
     // Animate skills
     gsap.from('.skill-category', {
         scrollTrigger: {
             trigger: '.skills-grid',
-            start: 'top 80%'
+            start: 'top 85%',
+            once: true
         },
         opacity: 0,
-        y: 50,
+        y: 30,
         stagger: 0.1,
-        duration: 0.8,
-        ease: 'power3.out'
+        duration: 0.6,
+        ease: 'power2.out',
+        clearProps: 'all'
     });
 
     // Animate contact cards
     gsap.from('.contact-card', {
         scrollTrigger: {
             trigger: '.contact-info',
-            start: 'top 80%'
+            start: 'top 85%',
+            once: true
         },
         opacity: 0,
-        scale: 0.9,
+        y: 20,
         stagger: 0.1,
-        duration: 0.6,
-        ease: 'back.out(1.7)'
+        duration: 0.5,
+        ease: 'power2.out',
+        clearProps: 'all'
     });
 });
 
@@ -242,12 +256,18 @@ backToTopBtn.addEventListener('click', () => {
 const footerEl = document.querySelector('.footer');
 function avoidFooterOverlap() {
     if (!footerEl || !backToTopBtn) return;
-    const footerTop = footerEl.getBoundingClientRect().top;
+    const footerRect = footerEl.getBoundingClientRect();
     const viewportH = window.innerHeight || document.documentElement.clientHeight;
-    if (footerTop < viewportH - 20) {
-        backToTopBtn.classList.add('safe-area');
+    const buttonHeight = 50; // button height
+    const buttonBottom = 32; // 2rem = 32px bottom position
+    
+    // Check if footer is visible in viewport
+    if (footerRect.top < viewportH - buttonBottom - buttonHeight) {
+        // Calculate how much to move button up
+        const overlap = viewportH - footerRect.top - 20; // 20px additional spacing
+        backToTopBtn.style.bottom = Math.max(buttonBottom, overlap) + 'px';
     } else {
-        backToTopBtn.classList.remove('safe-area');
+        backToTopBtn.style.bottom = '2rem';
     }
 }
 
@@ -285,15 +305,16 @@ contactForm.addEventListener('submit', (e) => {
 // PARALLAX EFFECT
 // ============================================
 
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.hero-image');
-    
-    parallaxElements.forEach(element => {
-        const speed = 0.2; // gentler parallax for smoothness
-        element.style.transform = `translateY(${scrolled * speed}px)`;
-    });
-});
+// Disabled parallax to prevent text disappearing and ensure smooth scrolling
+// window.addEventListener('scroll', () => {
+//     const scrolled = window.pageYOffset;
+//     const parallaxElements = document.querySelectorAll('.hero-image');
+//     
+//     parallaxElements.forEach(element => {
+//         const speed = 0.2; // gentler parallax for smoothness
+//         element.style.transform = `translateY(${scrolled * speed}px)`;
+//     });
+// });
 
 // ============================================
 // IMAGE BORDER ROTATION
