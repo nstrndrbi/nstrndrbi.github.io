@@ -392,26 +392,28 @@ class CursorTrail {
 // ============================================
 // SCROLL REVEAL ANIMATION
 // ============================================
+// Note: GSAP ScrollTrigger is already handling animations above
+// This section is disabled to prevent conflicts
 
-const revealElements = document.querySelectorAll('.research-card, .publication-item, .stat-card, .skill-category');
-
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, {
-    threshold: 0.1
-});
-
-revealElements.forEach(element => {
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(30px)';
-    element.style.transition = 'all 0.6s ease';
-    revealObserver.observe(element);
-});
+// const revealElements = document.querySelectorAll('.research-card, .publication-item, .stat-card, .skill-category');
+// 
+// const revealObserver = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             entry.target.style.opacity = '1';
+//             entry.target.style.transform = 'translateY(0)';
+//         }
+//     });
+// }, {
+//     threshold: 0.1
+// });
+// 
+// revealElements.forEach(element => {
+//     element.style.opacity = '0';
+//     element.style.transform = 'translateY(30px)';
+//     element.style.transition = 'all 0.6s ease';
+//     revealObserver.observe(element);
+// });
 
 // ============================================
 // LOADING SCREEN (Optional)
