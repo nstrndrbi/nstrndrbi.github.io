@@ -151,7 +151,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8rem 2rem 4rem;
+    padding: 8rem 1.5rem 4rem;
     position: relative;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
@@ -242,7 +242,7 @@ img {
     border: 3px solid var(--secondary-color);
     border-radius: 50%;
     z-index: 1;
-    animation: rotate 20s linear infinite;
+    animation: rotate 30s linear infinite;
 }
 
 .scroll-indicator {
@@ -360,7 +360,7 @@ img {
    ============================================ */
 
 .section {
-    padding: 6rem 2rem;
+    padding: 6rem 1.5rem;
 }
 
 .section-alt {
@@ -368,8 +368,10 @@ img {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1120px;
     margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .section-title {
@@ -916,6 +918,11 @@ img {
 .back-to-top.visible {
     opacity: 1;
     visibility: visible;
+}
+
+/* When footer is in view, move button up so it doesn't cover footer */
+.back-to-top.safe-area {
+    transform: translateY(-80px);
 }
 
 .back-to-top:hover {

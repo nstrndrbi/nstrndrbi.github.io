@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hero animations
     gsap.from('.hero-text', {
         opacity: 0,
-        y: 50,
-        duration: 100,
+        y: 40,
+        duration: 1,
         ease: 'power3.out'
     });
 
@@ -238,6 +238,23 @@ backToTopBtn.addEventListener('click', () => {
     });
 });
 
+// Prevent back-to-top from overlapping the footer
+const footerEl = document.querySelector('.footer');
+function avoidFooterOverlap() {
+    if (!footerEl || !backToTopBtn) return;
+    const footerTop = footerEl.getBoundingClientRect().top;
+    const viewportH = window.innerHeight || document.documentElement.clientHeight;
+    if (footerTop < viewportH - 20) {
+        backToTopBtn.classList.add('safe-area');
+    } else {
+        backToTopBtn.classList.remove('safe-area');
+    }
+}
+
+window.addEventListener('scroll', avoidFooterOverlap);
+window.addEventListener('resize', avoidFooterOverlap);
+avoidFooterOverlap();
+
 // ============================================
 // CONTACT FORM HANDLING
 // ============================================
@@ -273,7 +290,7 @@ window.addEventListener('scroll', () => {
     const parallaxElements = document.querySelectorAll('.hero-image');
     
     parallaxElements.forEach(element => {
-        const speed = 0.5;
+        const speed = 0.2; // gentler parallax for smoothness
         element.style.transform = `translateY(${scrolled * speed}px)`;
     });
 });
@@ -282,18 +299,7 @@ window.addEventListener('scroll', () => {
 // IMAGE BORDER ROTATION
 // ============================================
 
-const imageBorder = document.querySelector('.image-border');
-let rotation = 0;
-
-function rotateBorder() {
-    rotation += 0.5;
-    if (imageBorder) {
-        imageBorder.style.transform = `rotate(${rotation}deg)`;
-    }
-    requestAnimationFrame(rotateBorder);
-}
-
-rotateBorder();
+// CSS handles border rotation via @keyframes; JS rotation removed for smoothness
 
 // ============================================
 // TYPING EFFECT (Optional Enhancement)
