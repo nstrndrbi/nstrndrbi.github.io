@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.from('.hero-text', {
         opacity: 0,
         y: 50,
-        duration: 1,
+        duration: 100,
         ease: 'power3.out'
     });
 
