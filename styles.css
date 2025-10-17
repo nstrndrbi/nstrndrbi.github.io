@@ -172,9 +172,9 @@ img {
 .greeting {
     display: block;
     font-size: 1.2rem;
-    color: var(--text-light);
+    color: var(--primary-color);
     font-family: var(--font-body);
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 0.5rem;
 }
 
@@ -185,21 +185,23 @@ img {
     color: var(--primary-color);
     margin-bottom: 1rem;
     line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     color: var(--secondary-color);
     margin-bottom: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .hero-description {
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-bottom: 2.5rem;
     max-width: 550px;
     line-height: 1.8;
+    font-weight: 400;
 }
 
 .hero-buttons {
@@ -731,17 +733,22 @@ img {
    ============================================ */
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
     margin-top: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-info {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    align-content: start;
+    width: 100%;
+    max-width: 800px;
 }
 
 .contact-card {
@@ -805,6 +812,8 @@ img {
     padding: 2.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-sm);
+    width: 100%;
+    max-width: 600px;
 }
 
 .form-group {
@@ -1017,6 +1026,10 @@ img {
     }
     
     .contact-content {
+        flex-direction: column;
+    }
+    
+    .contact-info {
         grid-template-columns: 1fr;
     }
     
