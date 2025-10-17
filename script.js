@@ -113,6 +113,21 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power2.out',
         clearProps: 'all'
     });
+
+    // Animate award cards
+    gsap.from('.award-card', {
+        scrollTrigger: {
+            trigger: '.awards-grid',
+            start: 'top 85%',
+            once: true
+        },
+        opacity: 0,
+        y: 30,
+        stagger: 0.12,
+        duration: 0.6,
+        ease: 'power2.out',
+        clearProps: 'all'
+    });
 });
 
 // ============================================
@@ -177,13 +192,23 @@ window.addEventListener('scroll', highlightNavLink);
 function animateCounter(element, target, duration = 2000) {
     let current = 0;
     const increment = target / (duration / 16);
+    const isGPA = element.parentElement.textContent.includes('GPA');
+    
     const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
-            element.textContent = target + '+';
+            if (isGPA) {
+                element.textContent = '4.0';
+            } else {
+                element.textContent = target + '+';
+            }
             clearInterval(timer);
         } else {
-            element.textContent = Math.floor(current);
+            if (isGPA) {
+                element.textContent = current.toFixed(1);
+            } else {
+                element.textContent = Math.floor(current);
+            }
         }
     }, 16);
 }
@@ -294,8 +319,24 @@ contactForm.addEventListener('submit', (e) => {
     // Here you would typically send the data to a server
     console.log('Form submitted:', formData);
     
-    // Show success message (you can customize this)
-    alert('Thank you for your message! I will get back to you soon.');
+    // Show success message with better UI
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+    
+    submitBtn.innerHTML = `
+        <svg style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span>Message Sent!</span>
+    `;
+    submitBtn.disabled = true;
+    submitBtn.style.background = 'var(--gradient-accent)';
+    
+    setTimeout(() => {
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+        submitBtn.style.background = '';
+    }, 3000);
     
     // Reset form
     contactForm.reset();
@@ -341,12 +382,15 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Uncomment below to enable typing effect for the name
-// const nameElement = document.querySelector('.name');
-// if (nameElement) {
-//     const originalText = nameElement.textContent;
-//     typeWriter(nameElement, originalText, 80);
-// }
+// Add subtle typing effect to greeting
+const greetingElement = document.querySelector('.greeting');
+if (greetingElement) {
+    const originalText = greetingElement.textContent;
+    greetingElement.textContent = '';
+    setTimeout(() => {
+        typeWriter(greetingElement, originalText, 50);
+    }, 1000);
+}
 
 // ============================================
 // CURSOR TRAIL EFFECT (Optional Enhancement)
@@ -443,12 +487,30 @@ class CursorTrail {
 // });
 
 // ============================================
-// LOADING SCREEN (Optional)
+// LOADING SCREEN & PROGRESS BAR
 // ============================================
 
 window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 500);
 });
+
+// Progress bar on scroll
+const progressBar = document.getElementById('progress-bar');
+
+function updateProgressBar() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+    
+    if (progressBar) {
+        progressBar.style.transform = `scaleX(${scrollPercentage / 100})`;
+    }
+}
+
+window.addEventListener('scroll', updateProgressBar);
+window.addEventListener('resize', updateProgressBar);
 
 // ============================================
 // DARK MODE TOGGLE (Optional Enhancement)
@@ -468,7 +530,7 @@ class DarkModeToggle {
         toggle.style.cssText = `
             position: fixed;
             bottom: 100px;
-            right: 2rem;
+            right: 30px;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -523,15 +585,16 @@ class DarkModeToggle {
     }
 }
 
-// Uncomment to enable dark mode toggle
-// new DarkModeToggle();
+// Enable dark mode toggle
+new DarkModeToggle();
 
 // ============================================
 // CONSOLE MESSAGE
 // ============================================
 
-console.log('%c👋 Welcome to my portfolio!', 'font-size: 20px; color: #e74c3c; font-weight: bold;');
-console.log('%cInterested in working together? Get in touch!', 'font-size: 14px; color: #3498db;');
+console.log('%c👋 Welcome to my portfolio!', 'font-size: 20px; color: #5e72e4; font-weight: bold;');
+console.log('%cInterested in working together? Get in touch!', 'font-size: 14px; color: #11cdef;');
+console.log('%cEmail: ndarab2@uic.edu', 'font-size: 12px; color: #6c757d;');
 
 // ============================================
 // PERFORMANCE MONITORING

@@ -13,6 +13,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+    <!-- Loading Animation -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progress-bar"></div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -23,6 +31,7 @@
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#publications" class="nav-link">Publications</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#awards" class="nav-link">Awards</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -47,8 +56,17 @@
                     Passionate about building trustworthy and resilient autonomous systems at the edge.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="Nastaran Darabi_CV_Oct_2025.pdf" download class="btn btn-secondary">Download CV</a>
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get in Touch</span>
+                    </a>
+                    <a href="Nastaran Darabi_CV_Oct_2025.pdf" download class="btn btn-secondary">
+                        <svg style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>Download CV</span>
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
@@ -102,7 +120,7 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-number" data-target="4">0</div>
-                        <div class="stat-label">GPA</div>
+                        <div class="stat-label">GPA (4.0/4.0)</div>
                     </div>
                 </div>
             </div>
@@ -293,7 +311,13 @@
                 </article>
             </div>
             <div class="text-center mt-4">
-                <a href="#" class="btn btn-outline">View All Publications</a>
+                <a href="https://scholar.google.com/citations?hl=en&user=ZKdsKvQAAAAJ&view_op=list_works" target="_blank" class="btn btn-outline">
+                    <svg style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                    <span>View All Publications</span>
+                </a>
             </div>
         </div>
     </section>
@@ -405,8 +429,61 @@
         </div>
     </section>
 
+    <!-- Awards & Achievements Section -->
+    <section class="awards section">
+        <div class="container">
+            <h2 class="section-title">Awards & Recognition</h2>
+            <div class="section-divider"></div>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <h3>SRC Research Scholar</h3>
+                    <p class="award-year">2023 - Present</p>
+                    <p class="award-description">Selected as a Research Scholar by the Semiconductor Research Corporation for outstanding research contributions in edge computing and autonomous systems.</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Perfect GPA</h3>
+                    <p class="award-year">2021 - Present</p>
+                    <p class="award-description">Maintained a perfect 4.0/4.0 GPA throughout PhD and concurrent Master's programs in both Computer Science and ECE.</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="10" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0110 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3>Apple ML Internship</h3>
+                    <p class="award-year">2025</p>
+                    <p class="award-description">Selected for competitive Machine Learning internship at Apple, working on AI/ML models for manufacturing equipment optimization.</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Top Conference Publications</h3>
+                    <p class="award-year">2024 - 2026</p>
+                    <p class="award-description">Published in premier conferences including AAAI, ICRA, ICASSP, and DATE, showcasing cutting-edge research in AI and robotics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
-    <section class="skills section">
+    <section class="skills section section-alt">
         <div class="container">
             <h2 class="section-title">Skills & Expertise</h2>
             <div class="section-divider"></div>
@@ -525,7 +602,13 @@
                     <div class="form-group">
                         <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <svg style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13"></path>
+                            <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                        </svg>
+                        <span>Send Message</span>
+                    </button>
                 </form>
             </div>
         </div>
